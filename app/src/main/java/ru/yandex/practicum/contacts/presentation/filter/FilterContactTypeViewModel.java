@@ -68,6 +68,7 @@ public class FilterContactTypeViewModel extends BaseBottomSheetViewModel {
         // создайте список типа FilterContactTypeUi и заполните его с помощью цикла forEach
         ArrayList<FilterContactTypeUi>  filterContactTypeUi = new ArrayList<FilterContactTypeUi>();
         // forEach должен бежать по строковому массиву, который вы создали ранее
+        filterContactTypeUi.add(createAllSelectedItem(availableFilters));
         for (String filter : availableFilters){
             FilterContactTypeUi filterUi = createFilterContactType(filter);
             filterContactTypeUi.add(filterUi);
